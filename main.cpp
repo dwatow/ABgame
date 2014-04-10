@@ -6,15 +6,12 @@ using namespace std;
 
 void Guess(vector<char>& abcd, int times)
 {
+
 	cout << endl << "Guess 4 letter" << endl << endl;
 
 	if (times == 0)
 	{
-		cout << "ex:A(enter)"    << endl 
-			 << "   B(enter)"    << endl 
-			 << "   C(enter)"    << endl 
-			 << "   D(enter)"    << endl
-			 << ":";
+		cout << "ex:ABCD(enter):"    << endl;
 	}
 
 	char letter;
@@ -36,6 +33,7 @@ int findB(vector<char> abcd, vector<Topic> topic, vector<char>& B)
 			topic[j].Repet();
 			break;
 		}
+		;
 	}
 
 	return B.size();
@@ -90,6 +88,8 @@ int Result(int A, int B)
 
 int main(int argc, char const *argv[])
 {
+	for (int i = 0; i < 100; ++i)
+		cout << endl;
 	if (argc != 2)
 	{
 		cout << "error: the number of topic is not right" << endl;
